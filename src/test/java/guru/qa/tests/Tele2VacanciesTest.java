@@ -13,7 +13,7 @@ public class Tele2VacanciesTest extends TestBase {
     @Owner("Loarlam")
     @Severity(SeverityLevel.TRIVIAL)
     @DisplayName("Проверка некорректного ввода номера телефона для входа в аккаунт")
-    void checkingAboutPage() {
+    void checkingInvalidNumber() {
         tele2VacancySteps.openingPage("/about/career/vacancies")
                 .checkingResultsOnPage("Вакансии Tele2")
                 .checkingUrlOnPage("https://msk.tele2.ru/about/career/vacancies")
@@ -26,22 +26,33 @@ public class Tele2VacanciesTest extends TestBase {
     @Test
     @Tag("tele2")
     @Owner("Loarlam")
-    @Severity(SeverityLevel.TRIVIAL)
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Поиск вакансии через ввод на странице \"Вакансии Tele2\"")
-    void successfulTest() {
+    void checkingTheEnteredVacancy() {
         tele2VacancySteps.openingPage("/about/career/vacancies")
                 .checkingResultsOnPage("Вакансии Tele2")
                 .settingValueInVacancySelection("Руководитель")
                 .findingVacancy("Руководитель");
     }
 
+    @Test
+    @Tag("tele2")
+    @Owner("Loarlam")
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Проверка ввода некорректного значения для поика вакансии")
+    void successfulTest() {
+        tele2VacancySteps.openingPage("/about/career/vacancies")
+                .checkingResultsOnPage("Вакансии Tele2")
+                .settingValueInVacancySelection("ЖЖЖЖ")
+                .findingErrorTextForVacancy("ЖЖЖЖ");
+    }
 
     @Test
     @Tag("tele2")
     @Owner("Loarlam")
-    @Severity(SeverityLevel.TRIVIAL)
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Поиск вакансии по подразделениям на странице \"Вакансии Tele2\"")
-    void successfulTest1() {
+    void checkingVacanciesWithSubdivisionSearch() {
         tele2VacancySteps.openingPage("/about/career/vacancies")
                 .checkingResultsOnPage("Вакансии Tele2")
                 .clickingOnSubdivision()
