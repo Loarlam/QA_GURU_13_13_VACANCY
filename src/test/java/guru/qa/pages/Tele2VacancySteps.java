@@ -5,24 +5,54 @@ import io.qameta.allure.Step;
 
 import java.io.File;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.byAttribute;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
 
 public class Tele2VacancySteps {
-    private SelenideElement vacancy = $(".text-field-holder.search-field"),
+    private SelenideElement vacancy = $("#fieldOfVacancyName"),
             state = $("#react-select-3-input"),
             city = $("#react-select-4-input"),
-            linkToVacancies = $("[href=\"/about/career/vacancies\"]"),
+            linkToAboutPage = $(byAttribute("href", "/about")),
+            linkToVacancies = $(byAttribute("href", "/about/career/vacancies")),
             resultForm = $(".modal-title"),
             page = $(".page"),
-            blockWithVacancy = $("vacancy-card__item-name"),
-            filter = $("#selectOfVacancyDivisions_listbox_active_option");
+            blockWithVacancy = $(".vacancy-card__item-name"),
+            filter = $("#selectOfVacancyDivisions_listbox_active_option"),
+            loginButton = $(".actions-container"),
+            number = $(".text-field-holder.phone-field"),
+            submitButton = $("button[type=submit]"),
+            errorText = $("span[class=error-text]"),
+            subdivisionDropDown = $(".rw-multiselect-wrap");
 
-    @Step("Открываем страницу \"{linkValue}\"")
-    public Tele2VacancySteps openingAbout(String linkValue) {
+    @Step("Открываем страницу \"https://msk.tele2.ru{linkValue}\"")
+    public Tele2VacancySteps openingPage(String linkValue) {
         open(linkValue);
+        return this;
+    }
+
+    @Step("Клик по кнопке входа в личный кабинет")
+    public Tele2VacancySteps clickingOnLoginButton() {
+        loginButton.click();
+        return this;
+    }
+
+    @Step("Клик в поле ввода номера")
+    public Tele2VacancySteps clickingInNumberFiled() {
+        number.click();
+        return this;
+    }
+
+    @Step("Клик на кнопку \"Далее\"")
+    public Tele2VacancySteps clickingOnSubmit() {
+        submitButton.click();
+        return this;
+    }
+
+    @Step("Проверка текста ошибки")
+    public Tele2VacancySteps checkingErrorText() {
+        errorText.should(exist);
         return this;
     }
 
@@ -38,9 +68,21 @@ public class Tele2VacancySteps {
         return this;
     }
 
+    @Step("Клик по ссылке \"О Tele2\"")
+    public Tele2VacancySteps clickingOnLinkAbout() {
+        linkToAboutPage.click();
+        return this;
+    }
+
     @Step("Клик по ссылке \"Вакансии\"")
     public Tele2VacancySteps clickingOnLinkVacancies() {
         linkToVacancies.click();
+        return this;
+    }
+
+    @Step("Клик по ссылке \"Вакансии\"")
+    public Tele2VacancySteps clickingOnSubdivision() {
+        subdivisionDropDown.click();
         return this;
     }
 

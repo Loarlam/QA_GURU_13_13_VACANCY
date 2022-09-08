@@ -12,37 +12,40 @@ public class Tele2VacanciesTest extends TestBase {
     @Tag("tele2")
     @Owner("Loarlam")
     @Severity(SeverityLevel.TRIVIAL)
-    @DisplayName("Клик по ссылке \"Вакансии\" переводит на страницу вакансий")
+    @DisplayName("Проверка некорректного ввода номера телефона для входа в аккаунт")
     void checkingAboutPage() {
-        tele2VacancySteps.openingAbout("/about")
-                .checkingResultsOnPage("Вакансии")
-                .clickingOnLinkVacancies()
+        tele2VacancySteps.openingPage("/about/career/vacancies")
                 .checkingResultsOnPage("Вакансии Tele2")
-                .checkingUrlOnPage("https://msk.tele2.ru/about/career/vacancies");
+                .checkingUrlOnPage("https://msk.tele2.ru/about/career/vacancies")
+                .clickingOnLoginButton()
+                .clickingInNumberFiled()
+                .clickingOnSubmit()
+                .checkingErrorText();
     }
 
-//    @Test
-//    @Tag("tele2")
-//    @Owner("Loarlam")
-//    @Severity(SeverityLevel.TRIVIAL)
-//    @DisplayName("Поиск вакансии на странице \"Вакансии Tele2\"")
-//    void successfulTest() {
-//        tele2VacancySteps.openingAbout("/about/career/vacancies")
-//                .checkingResultsOnPage("Вакансии Tele2")
-//                .settingValueInVacancySelection("Руководитель")
-//                .findingVacancy("Руководитель");
-//    }
-//
-//
-//    @Test
-//    @Tag("tele2")
-//    @Owner("Loarlam")
-//    @Severity(SeverityLevel.TRIVIAL)
-//    @DisplayName("Поиск вакансии на странице \"Вакансии Tele2\"")
-//    void successfulTest1() {
-//        tele2VacancySteps.openingAbout("/about/career/vacancies")
-//                .checkingResultsOnPage("Вакансии Tele2")
-//                .choosingFilterOfSubdivision()
-//                .findingVacancy();
-//    }
+    @Test
+    @Tag("tele2")
+    @Owner("Loarlam")
+    @Severity(SeverityLevel.TRIVIAL)
+    @DisplayName("Поиск вакансии через ввод на странице \"Вакансии Tele2\"")
+    void successfulTest() {
+        tele2VacancySteps.openingPage("/about/career/vacancies")
+                .checkingResultsOnPage("Вакансии Tele2")
+                .settingValueInVacancySelection("Руководитель")
+                .findingVacancy("Руководитель");
+    }
+
+
+    @Test
+    @Tag("tele2")
+    @Owner("Loarlam")
+    @Severity(SeverityLevel.TRIVIAL)
+    @DisplayName("Поиск вакансии по подразделениям на странице \"Вакансии Tele2\"")
+    void successfulTest1() {
+        tele2VacancySteps.openingPage("/about/career/vacancies")
+                .checkingResultsOnPage("Вакансии Tele2")
+                .clickingOnSubdivision()
+                .choosingFilterOfSubdivision()
+                .findingVacancy();
+    }
 }
