@@ -14,8 +14,8 @@ public class Tele2VacanciesTest extends TestBase {
     @Severity(SeverityLevel.TRIVIAL)
     @DisplayName("Проверка некорректного ввода номера телефона для входа в аккаунт")
     void checkingInvalidNumber() {
-        tele2VacancySteps.openingPage("/about/career/vacancies")
-                .checkingResultsOnPage("Вакансии Tele2")
+        tele2VacancySteps.openingPage(dataForTheTest.additionalPath)
+                .checkingResultsOnPage(dataForTheTest.h1Text)
                 .checkingUrlOnPage("https://msk.tele2.ru/about/career/vacancies")
                 .clickingOnLoginButton()
                 .clickingInNumberFiled()
@@ -29,10 +29,10 @@ public class Tele2VacanciesTest extends TestBase {
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Поиск вакансии через ввод на странице \"Вакансии Tele2\"")
     void checkingTheEnteredVacancy() {
-        tele2VacancySteps.openingPage("/about/career/vacancies")
-                .checkingResultsOnPage("Вакансии Tele2")
-                .settingValueInVacancySelection("Руководитель")
-                .findingVacancy("Руководитель");
+        tele2VacancySteps.openingPage(dataForTheTest.additionalPath)
+                .checkingResultsOnPage(dataForTheTest.h1Text)
+                .settingValueInVacancySelection(dataForTheTest.jobTitle)
+                .findingVacancy(dataForTheTest.jobTitle);
     }
 
     @Test
@@ -41,10 +41,10 @@ public class Tele2VacanciesTest extends TestBase {
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка ввода некорректного значения для поика вакансии")
     void successfulTest() {
-        tele2VacancySteps.openingPage("/about/career/vacancies")
-                .checkingResultsOnPage("Вакансии Tele2")
-                .settingValueInVacancySelection("ЖЖЖЖ")
-                .findingErrorTextForVacancy("ЖЖЖЖ");
+        tele2VacancySteps.openingPage(dataForTheTest.additionalPath)
+                .checkingResultsOnPage(dataForTheTest.h1Text)
+                .settingValueInVacancySelection(dataForTheTest.errorJobTitle)
+                .findingErrorTextForVacancy(dataForTheTest.errorJobTitle);
     }
 
     @Test
@@ -53,8 +53,8 @@ public class Tele2VacanciesTest extends TestBase {
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Поиск вакансии по подразделениям на странице \"Вакансии Tele2\"")
     void checkingVacanciesWithSubdivisionSearch() {
-        tele2VacancySteps.openingPage("/about/career/vacancies")
-                .checkingResultsOnPage("Вакансии Tele2")
+        tele2VacancySteps.openingPage(dataForTheTest.additionalPath)
+                .checkingResultsOnPage(dataForTheTest.h1Text)
                 .clickingOnSubdivision()
                 .choosingFilterOfSubdivision()
                 .findingVacancy();

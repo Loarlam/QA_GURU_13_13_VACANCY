@@ -101,23 +101,4 @@ public class Tele2VacancySteps {
         blockWithVacancy.shouldBe(visible);
         return this;
     }
-
-
-    @Step("Выбираем \"{userHobbies}\" близ \"Hobbies\"")
-    public Tele2VacancySteps settingHobbies(int userHobbies) {
-        $(String.format("#hobbies-checkbox-%s", userHobbies)).sendKeys(" ");
-        return this;
-    }
-
-    @Step("Клик по ссылке \"О Tele2\"")
-    public Tele2VacancySteps clickingOnLinkAbout() {
-        linkToAboutPage.click();
-        return this;
-    }
-
-    @Step("Клик по ссылке \"Вакансии\"")
-    public Tele2VacancySteps clickingOnLinkVacancies() {
-        linkToVacancies.click();
-        return this;
-    }
 }
