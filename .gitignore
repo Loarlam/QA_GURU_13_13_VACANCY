@@ -2,6 +2,7 @@
 /.gradle/
 /.idea/
 /gradle/
+/notifications/
 *.log
 *.class
 *.jar
