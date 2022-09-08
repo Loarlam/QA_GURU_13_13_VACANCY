@@ -95,7 +95,7 @@ test
 ![](images/results/AllureTestOpsTestCases.jpg)
 
 ## :cinema: Видео прохождения тестов
-https://user-images.githubusercontent.com/68316516/178743616-3d6e2e4a-ca29-48a2-b9aa-f54956871810.mp4
+https://selenoid.autotests.cloud/video/ae80518d041667b098f949c1708c0c9f.mp4
 
 ## <img width="5%" title="Jira" src="images/logo/jira.svg"> Интеграция с Jira
 ![](images/results/JiraResult.jpg)
