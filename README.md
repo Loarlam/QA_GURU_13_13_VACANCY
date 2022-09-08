@@ -76,6 +76,7 @@ test
 |                   | Исходники страницы теста          |
 |                   | Исходники консоли браузера        |
 |                   | Финальный ролик с процессом теста |
+
 [![](images/results/AllureReportTestCases.jpg)](https://jenkins.autotests.cloud/job/Loarlam-QA_GURU_13_13_VACANCY/allure/#suites/1d00f9eba85bfdc8b26ce142056449f8/9f38bfb766a189a5/)
 
 ## <img width="5%" title="Allure" src="images/logo/allureTestOps.svg"> Интеграция с Allure TestOps
@@ -90,6 +91,7 @@ test
 |                   | Исходники страницы теста          |
 |                   | Исходники консоли браузера        |
 |                   | Финальный ролик с процессом теста |
+
 ![](images/results/AllureTestOpsTestCases.jpg)
 
 ## :cinema: Видео прохождения тестов
