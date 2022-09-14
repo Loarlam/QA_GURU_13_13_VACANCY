@@ -52,13 +52,13 @@
 ## :desktop_computer: Команды запуска тестов в терминале
 #### Команды для локального запуска:
 ```bash
-gradle clean test
+./gradlew clean taskWithTagVacancy
 ```
 
 #### Команды для удаленного запуска:
 ```bash
 clean
-test
+taskWithTagVacancy
 -DremoteLink=${REMOTE_LINK}
 -Dbrowser=${BROWSER}
 -Dversion=${BROWSER_VERSION}
