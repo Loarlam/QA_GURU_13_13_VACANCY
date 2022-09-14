@@ -5,6 +5,7 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byAttribute;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
 
@@ -16,9 +17,11 @@ public class Tele2VacancySteps {
             blockWithVacancy = $(".vacancy-card__item-name"),
             filter = $("#selectOfVacancyDivisions_listbox_active_option"),
             loginButton = $(".actions-container"),
-            number = $(".text-field-holder.phone-field"),
+            number = $("input[id=\"keycloakAuth.phone\"]"),
+            password = $("input[id=\"keycloakAuth.password\"]"),
             submitButton = $("button[type=submit]"),
             errorTextLogin = $("span[class=error-text]"),
+            errorTextPassword = $(".static-error-text"),
             subdivisionDropDown = $(".rw-multiselect-wrap"),
             errorTextVacancy = $(".vacancy-list__empty-filter-text");
 
@@ -52,15 +55,45 @@ public class Tele2VacancySteps {
         return this;
     }
 
-    @Step("Клик на кнопку \"Далее\" в форме входа")
+    @Step("Клик в поле ввода пароля")
+    public Tele2VacancySteps clickingInPasswordFiled() {
+        password.click();
+        return this;
+    }
+
+    @Step("Клик по кнопке \"{buttonText}\"")
+    public Tele2VacancySteps clickingInPasswordButton(String buttonText) {
+        $(byText(buttonText)).click();
+        return this;
+    }
+
+    @Step("Ввод добавочной части номера \"{phoneNumber}\"")
+    public Tele2VacancySteps enteringPhoneNumber (String phoneNumber) {
+        number.setValue(phoneNumber);
+        return this;
+    }
+
+    @Step("Ввод пароля \"{passwordSymbols}\"")
+    public Tele2VacancySteps enteringPassword (String passwordSymbols) {
+        password.setValue(passwordSymbols);
+        return this;
+    }
+
+    @Step("Клик на кнопку подтверждения входа в форме входа")
     public Tele2VacancySteps clickingOnSubmit() {
         submitButton.click();
         return this;
     }
 
-    @Step("Проверка текста ошибки в форме входа")
-    public Tele2VacancySteps checkingErrorText() {
+    @Step("Проверка текста ошибки в форме ввода логина")
+    public Tele2VacancySteps checkingErrorTextLogin() {
         errorTextLogin.should(exist);
+        return this;
+    }
+
+    @Step("Проверка текста ошибки в форме ввода пароля")
+    public Tele2VacancySteps checkingErrorTextPassword(String errorText) {
+        errorTextPassword.shouldHave(text(errorText)).shouldBe(visible);;
         return this;
     }
 
