@@ -95,14 +95,35 @@ taskWithTagVacancy
 
 ![](images/results/AllureTestOpsTestCases.jpg)
 
-## :cinema: Видео прохождения тестов
-<p align="center">
-  <img src="images/results/VideoResult.gif">
-</p>
-
 ## <img width="5%" title="Jira" src="images/logo/jira.svg"> Интеграция с Jira
 ![](images/results/JiraResult.jpg)
 
 ## <img width="5%" title="Telegram" src="images/logo/telegram.svg"> Информирование в Telegram
 #### Оповещение ведется при помощи Telegram bot API:
 ![](images/results/TelegramResult.jpg)
+
+## :cinema: Видео прохождения тестов
+#### :white_check_mark: Проверка ввода некорректного значения для поика вакансии:
+<p align="center">
+  <img src="images/results/VideoResult1.gif">
+</p>
+
+#### :white_check_mark: Поиск вакансии по подразделениям на странице "Вакансии Tele2":
+<p align="center">
+  <img src="images/results/VideoResult2.gif">
+</p>
+
+#### :white_check_mark: Проверка некорректного ввода пароля для входа в аккаунт:
+<p align="center">
+  <img src="images/results/VideoResult3.gif">
+</p>
+
+#### :white_check_mark: Проверка некорректного ввода номера телефона для входа в аккаунт:
+<p align="center">
+  <img src="images/results/VideoResult4.gif">
+</p>
+
+#### :white_check_mark: Поиск вакансии через ввод на странице "Вакансии Tele2":
+<p align="center">
+  <img src="images/results/VideoResult5.gif">
+</p>
