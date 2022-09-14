@@ -1,15 +1,18 @@
 package guru.qa.tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import guru.qa.attachments.AttachmentsForReport;
 import guru.qa.config.CredentialsConfig;
 import guru.qa.pages.Tele2VacancySteps;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import static io.qameta.allure.Allure.step;
 
 public class TestBase {
     Tele2VacancySteps tele2VacancySteps = new Tele2VacancySteps();
@@ -33,11 +36,12 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
     }
 
-    @AfterAll
-    static void afterAllTests() {
+    @AfterEach
+    public void afterAllTests() {
         AttachmentsForReport.attachScreenshot();
         AttachmentsForReport.pageSource();
         AttachmentsForReport.browserConsoleLogs();
         AttachmentsForReport.addVideo();
+        step("Close driver", Selenide::closeWebDriver);
     }
 }
