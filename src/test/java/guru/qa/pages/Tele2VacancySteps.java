@@ -37,7 +37,7 @@ public class Tele2VacancySteps {
         return this;
     }
 
-    @Step("Url открытой страницы должен быть \"{validateFieldValue}\"")
+    @Step("Url открытой страницы должен быть \"{validateUrl}\"")
     public Tele2VacancySteps checkingUrlOnPage(String validateUrl) {
         webdriver().shouldHave(url(validateUrl));
         return this;

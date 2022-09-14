@@ -34,6 +34,7 @@
 + :white_check_mark: Поиск вакансии по подразделениям на странице "Вакансии Tele2"
 + :white_check_mark: Проверка ввода некорректного значения для поика вакансии
 + :white_check_mark: Проверка некорректного ввода номера телефона для входа в аккаунт
++ :white_check_mark: Проверка некорректного ввода пароля для входа в аккаунт
 
 ## <img width="5%" src="images/logo/jenkins.svg"> Сборка в Jenkins
 [![](images/results/JenkinsResult.jpg)](https://jenkins.autotests.cloud/job/Loarlam-QA_GURU_13_13_VACANCY/)
