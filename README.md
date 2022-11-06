@@ -48,6 +48,7 @@
 | BROWSER_RESOLUTION | Размер окна браузера                |
 
 [![](images/results/JenkinsStart.jpg)](https://jenkins.autotests.cloud/job/Loarlam-QA_GURU_13_13_VACANCY/build)
+-
 
 ## :desktop_computer: Команды запуска тестов в терминале
 #### Команды для локального запуска:
