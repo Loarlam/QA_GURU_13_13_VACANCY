@@ -47,8 +47,7 @@
 | BROWSER_VERSION    | Версия браузера                     |
 | BROWSER_RESOLUTION | Размер окна браузера                |
 
-[![](images/results/JenkinsStart.jpg)](https://jenkins.autotests.cloud/job/Loarlam-QA_GURU_13_13_VACANCY/build)
--
+<kbd>[![](images/results/JenkinsStart.jpg)](https://jenkins.autotests.cloud/job/Loarlam-QA_GURU_13_13_VACANCY/build)</kbd>
 
 ## :desktop_computer: Команды запуска тестов в терминале
 #### Команды для локального запуска:
@@ -68,7 +67,7 @@ taskWithTagVacancy
 
 ## <img width="5%" title="Allure" src="images/logo/allureReport.svg"> Интеграция с Allure report
 #### Диаграммы прохождения тестов:
-[![](images/results/AllureReportScheme.jpg)](https://jenkins.autotests.cloud/job/Loarlam-QA_GURU_13_13_VACANCY/allure/)
+<kbd>[![](images/results/AllureReportScheme.jpg)](https://jenkins.autotests.cloud/job/Loarlam-QA_GURU_13_13_VACANCY/allure/)</kbd>
 
 #### Развернутый результат прохождения тестов:
 | Левая часть       | Правая часть                      |
@@ -79,11 +78,11 @@ taskWithTagVacancy
 |                   | Исходники консоли браузера        |
 |                   | Финальный ролик с процессом теста |
 
-[![](images/results/AllureReportTestCases.jpg)](https://jenkins.autotests.cloud/job/Loarlam-QA_GURU_13_13_VACANCY/allure/#suites/1d00f9eba85bfdc8b26ce142056449f8/9f38bfb766a189a5/)
+<kbd>[![](images/results/AllureReportTestCases.jpg)](https://jenkins.autotests.cloud/job/Loarlam-QA_GURU_13_13_VACANCY/allure/#suites/1d00f9eba85bfdc8b26ce142056449f8/9f38bfb766a189a5/)</kbd>
 
 ## <img width="5%" title="Allure" src="images/logo/allureTestOps.svg"> Интеграция с Allure TestOps
 #### Диаграммы прохождения тестов:
-![](images/results/AllureTestopsScheme.jpg)
+<kbd>![](images/results/AllureTestopsScheme.jpg)</kbd>
 
 #### Развернутый результат прохождения тестов:
 | Левая часть       | Правая часть                      |
@@ -94,10 +93,10 @@ taskWithTagVacancy
 |                   | Исходники консоли браузера        |
 |                   | Финальный ролик с процессом теста |
 
-![](images/results/AllureTestOpsTestCases.jpg)
+<kbd>![](images/results/AllureTestOpsTestCases.jpg)</kbd>
 
 ## <img width="5%" title="Jira" src="images/logo/jira.svg"> Интеграция с Jira
-![](images/results/JiraResult.jpg)
+<kbd>![](images/results/JiraResult.jpg)</kbd>
 
 ## :cinema: Видео прохождения тестов
 #### :white_check_mark: Проверка ввода некорректного значения для поика вакансии:
@@ -127,4 +126,4 @@ taskWithTagVacancy
 
 ## <img width="5%" title="Telegram" src="images/logo/telegram.svg"> Информирование в Telegram
 #### Оповещение ведется при помощи Telegram bot API:
-![](images/results/TelegramResult.jpg)
+<kbd>![](images/results/TelegramResult.jpg)</kbd>
