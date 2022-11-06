@@ -98,10 +98,6 @@ taskWithTagVacancy
 ## <img width="5%" title="Jira" src="images/logo/jira.svg"> Интеграция с Jira
 ![](images/results/JiraResult.jpg)
 
-## <img width="5%" title="Telegram" src="images/logo/telegram.svg"> Информирование в Telegram
-#### Оповещение ведется при помощи Telegram bot API:
-![](images/results/TelegramResult.jpg)
-
 ## :cinema: Видео прохождения тестов
 #### :white_check_mark: Проверка ввода некорректного значения для поика вакансии:
 <p align="center">
@@ -127,3 +123,7 @@ taskWithTagVacancy
 <p align="center">
   <img src="images/results/VideoResult5.gif">
 </p>
+
+## <img width="5%" title="Telegram" src="images/logo/telegram.svg"> Информирование в Telegram
+#### Оповещение ведется при помощи Telegram bot API:
+![](images/results/TelegramResult.jpg)
