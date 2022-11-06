@@ -1,6 +1,6 @@
 # Автоматизация тестирования страницы вакансий Tele2
 
-[![](images/results/Tele2Vacancies.jpg)](https://msk.tele2.ru/about/career/vacancies)
+<kbd>[![](images/results/Tele2Vacancies.jpg)](https://msk.tele2.ru/about/career/vacancies)</kbd>
 
 ## Содержание:
 + [Стек технологий](#computer-Стек-технологий)
